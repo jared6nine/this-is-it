@@ -1,0 +1,89 @@
+/* Dream of Freedom styles */
+:root{
+  --bg:#0b0d12;
+  --surface:#131722;
+  --text:#f1f5f9;
+  --muted:#b6c2d1;
+  --accent:#ffe14d;
+  --accent-2:#5eead4;
+  --danger:#ff4d4d;
+  --card:#161b27;
+  --glass:rgba(2,6,23,0.55);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial;color:var(--text);background:var(--bg);}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 20px;background:linear-gradient(90deg, rgba(19,23,34,.9), rgba(19,23,34,.6));
+  backdrop-filter: blur(8px); border-bottom:1px solid #1f2636;
+}
+.logo{font-weight:800;letter-spacing:.5px}
+.nav a{margin:0 10px;color:var(--muted)}
+.nav a:hover{color:var(--text)}
+.hero{
+  min-height:75vh;position:relative;display:grid;place-items:center;text-align:center;
+  background-image:url('assets/dream-of-freedom-bg.jpg'), radial-gradient(1000px 600px at 50% 20%, #1f2937, #0b0d12);
+  background-size:cover; background-position:center; background-blend-mode:overlay;
+}
+.overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,13,18,.2), rgba(11,13,18,.85));}
+.hero-content{position:relative;max-width:900px;padding:24px}
+.hero h1{font-size:clamp(28px,4vw,54px);margin:0 0 10px;line-height:1.1}
+.hero p{color:var(--muted);margin:0 0 18px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:12px 18px;border-radius:12px;background:#243042;color:var(--text);
+  border:1px solid #324258;transition:transform .08s ease, background .2s ease;
+}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#111;font-weight:700;border:none}
+.btn:hover{transform:translateY(-1px)}
+.support-note{opacity:.85;font-size:.95rem;margin-top:10px}
+.arrows{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px}
+.arrows img{width:40px;height:auto;filter:drop-shadow(0 0 6px rgba(255,77,77,.9))}
+.arrows span{color:var(--danger);font-weight:800;text-shadow:0 2px 10px rgba(255,77,77,.6)}
+
+.section{padding:56px 18px;max-width:1100px;margin:0 auto}
+.section h2{font-size:clamp(22px,3vw,34px);margin:0 0 16px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,#0f1420,#0b0f19);
+  border:1px solid #1e2636;border-radius:16px;padding:18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+.card h3{margin:0 0 8px}
+.card p{color:var(--muted)}
+.note{color:var(--muted);font-size:.85rem}
+
+.slider{position:relative;overflow:hidden;border-radius:16px;border:1px solid #1e2636;background:var(--glass)}
+.slides{display:flex;transition:transform .35s ease;width:100%}
+.product{min-width:100%;max-width:100%;margin:0;padding:28px;background:var(--card);border:1px solid #1f2636}
+.product h3{margin:0 0 6px}
+.price{font-weight:800}
+.slide-btn{
+  position:absolute;top:50%;transform:translateY(-50%);background:#111a;backdrop-filter: blur(6px);
+  border:none;color:#fff;font-size:28px;padding:8px 12px;border-radius:10px;cursor:pointer
+}
+.slide-btn.prev{left:8px}
+.slide-btn.next{right:8px}
+.slide-btn:hover{background:#222c}
+
+.request-form{display:grid;gap:10px;max-width:640px}
+.request-form input,.request-form textarea{
+  padding:12px;border-radius:10px;border:1px solid #22304a;background:#0d1320;color:var(--text)
+}
+.request-form button{justify-self:start}
+
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.testimonial{
+  background:#0d1220;border:1px solid #1e2636;border-radius:16px;padding:16px
+}
+.testimonial .name{font-weight:700}
+.testimonial .stars{color:var(--accent)}
+
+.site-footer{padding:24px;text-align:center;color:var(--muted);border-top:1px solid #1f2636;background:#0b0f17}
+@media (max-width:520px){
+  .nav{display:none}
+}

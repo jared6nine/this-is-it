@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream of Freedom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Dream of Freedom — a growing store of digital products that help you build online income.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🌟 Dream of Freedom</div>
+    <nav class="nav">
+      <a href="#freebies">Freebies</a>
+      <a href="#products">Products</a>
+      <a href="#requests">Request a Product</a>
+      <a href="#customer-wall">Customer Wall</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home" role="banner" aria-label="Hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>The digital store that’s always adding more</h1>
+      <p>Practical guides, playbooks, and tools to help you go from broke to boss — one download at a time.</p>
+      <div class="cta">
+        <a class="btn primary" href="#freebies">Grab the Freebies</a>
+        <a class="btn" href="#products">Browse Products</a>
+      </div>
+      <p class="support-note">Any support helps keep new drops coming — and yes, supporters get perks.</p>
+    </div>
+    <div class="arrows">
+      <img src="assets/red-arrow.png" alt="Arrow pointing to freebies">
+      <span>Start here — Freebies</span>
+    </div>
+  </section>
+
+  <section id="freebies" class="section">
+    <h2>Freebies</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>5 AI Side Hustles You Can Start Today</h3>
+        <p>Instant, beginner-friendly ideas. Connected via MailerLite.</p>
+        <a class="btn primary" href="#" id="freebie-mailerlite" aria-label="Get the 5 AI Side Hustles freebie">Get It Free</a>
+      </article>
+      <article class="card">
+        <h3>30-Day Online Business Starter Checklist</h3>
+        <p>Step-by-step checklist to launch your online business.</p>
+        <a class="btn" target="_blank" rel="noopener" href="https://jared585.gumroad.com/l/sbqwjb">Get It (Pay $0+)</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Featured Products</h2>
+    <div class="slider" aria-label="Product slider (carousel)">
+      <button class="slide-btn prev" aria-label="Previous product">&#10094;</button>
+      <div class="slides" id="product-slides">
+        <!-- Slides injected by script.js -->
+      </div>
+      <button class="slide-btn next" aria-label="Next product">&#10095;</button>
+    </div>
+    <p class="disclaimer">Transparent pricing. No fake urgency. More added regularly.</p>
+  </section>
+
+  <section id="requests" class="section">
+    <h2>Request a Product</h2>
+    <p>Want something specific? Tell us exactly what you need, and we’ll prioritize it.</p>
+    <form class="request-form" action="mailto:jaredritter585@gmail.com" method="post" enctype="text/plain">
+      <label for="req-name">Name</label>
+      <input id="req-name" name="Name" required/>
+      <label for="req-email">Email</label>
+      <input id="req-email" name="Email" type="email" required/>
+      <label for="req-details">What do you want us to build?</label>
+      <textarea id="req-details" name="Request" rows="5" required></textarea>
+      <button class="btn primary" type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <section id="customer-wall" class="section">
+    <h2>Customer Wall</h2>
+    <div id="testimonials" class="testimonials">
+      <!-- Testimonials injected by script.js -->
+    </div>
+    <small class="note">Want to be featured? Email your review to <a href="mailto:jaredritter585@gmail.com">jaredritter585@gmail.com</a>.</small>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Jared Ritter</h2>
+    <p>A husband, dad of seven, and relentless builder. Dream of Freedom exists to create simple, honest digital products that help real people make real progress — without hype.</p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:jaredritter585@gmail.com">jaredritter585@gmail.com</a></p>
+    <p>Business hours: Nights & weekends (America/Chicago). Replies within 24–48 hours.</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Dream of Freedom. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
