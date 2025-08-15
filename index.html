@@ -1,109 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dream of Freedom</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
-  <meta name="description" content="Dream of Freedom — a growing store of digital products that help you build online income.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dream of Freedom — Your Hub for Freedom, Wealth & Living Well</title>
+  <meta name="description" content="Digital products, AI tools, and step-by-step systems to make money, manage it smart, and live well." />
+  <style>
+    :root { --bg:#0b0b0f; --card:#12121a; --text:#e9e9f2; --muted:#a6a6b3; --gold:#e6b400; --goldDark:#b38700; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:linear-gradient(180deg,#0b0b0f 0%,#0f0f16 100%);color:var(--text)}
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+    .brand .logo{width:34px;height:34px;border-radius:8px;background:radial-gradient(circle at 30% 30%, #ffd666, #b38700);box-shadow:0 6px 22px rgba(230,180,0,.25)}
+    .nav a{opacity:.85;text-decoration:none;margin-left:16px}
+    .btn{display:inline-block;padding:12px 16px;background:var(--gold);border-radius:10px;color:#161616;font-weight:800;text-decoration:none}
+    .btn:hover{background:var(--goldDark)}
+    .ghost{background:transparent;border:1px solid #2a2a39;color:#e4e4ef}
+    .hero{padding:28px 0 10px;text-align:center}
+    .hero h1{font-size:clamp(28px,6vw,46px);line-height:1.1;margin:8px 0 10px}
+    .hero p{font-size:clamp(16px,2.7vw,20px);color:var(--muted);margin:0 auto 18px;max-width:800px}
+    .hero .ctaRow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+    .section{margin:34px 0}
+    .section h2{font-size:clamp(22px,4.5vw,30px);margin:0 0 10px}
+    .sub{color:var(--muted);margin:0 0 14px}
+    .grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media(min-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid #1f1f2a;border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .tag{display:inline-block;background:#1f2130;border:1px solid #2b2d42;color:#d7d7e4;border-radius:999px;padding:6px 10px;font-size:12px;margin-bottom:8px}
+    .card h3{margin:6px 0 6px;font-size:20px}
+    .price{color:#d8d8e6;font-weight:700;margin:4px 0 10px}
+    .muted{color:#bdbdd0}
+    .product-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .list{margin:0;padding-left:18px;color:#c9c9d6}
+    .split{display:grid;gap:16px;grid-template-columns:1fr}
+    @media(min-width:980px){.split{grid-template-columns:1.2fr .8fr}}
+    footer{margin:40px 0 10px;color:#a9a9b8;text-align:center}
+    .hr{height:1px;background:#1f1f2a;margin:24px 0}
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">🌟 Dream of Freedom</div>
-    <nav class="nav">
-      <a href="#freebies">Freebies</a>
-      <a href="#products">Products</a>
-      <a href="#requests">Request a Product</a>
-      <a href="#customer-wall">Customer Wall</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero" id="home" role="banner" aria-label="Hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>The digital store that’s always adding more</h1>
-      <p>Practical guides, playbooks, and tools to help you go from broke to boss — one download at a time.</p>
-      <div class="cta">
-        <a class="btn primary" href="#freebies">Grab the Freebies</a>
-        <a class="btn" href="#products">Browse Products</a>
+  <div class="wrap">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>Dream of Freedom</div>
       </div>
-      <p class="support-note">Any support helps keep new drops coming — and yes, supporters get perks.</p>
-    </div>
-    <div class="arrows">
-      <img src="assets/red-arrow.png" alt="Arrow pointing to freebies">
-      <span>Start here — Freebies</span>
-    </div>
-  </section>
+      <nav class="nav">
+        <a href="/#store">Store</a>
+        <a href="/#categories">Categories</a>
+        <a href="/#about">About</a>
+        <a class="btn ghost" href="/checklist/">Free Checklist</a>
+      </nav>
+    </header>
 
-  <section id="freebies" class="section">
-    <h2>Freebies</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>5 AI Side Hustles You Can Start Today</h3>
-        <p>Instant, beginner-friendly ideas. Connected via MailerLite.</p>
-        <a class="btn primary" href="#" id="freebie-mailerlite" aria-label="Get the 5 AI Side Hustles freebie">Get It Free</a>
-      </article>
-      <article class="card">
-        <h3>30-Day Online Business Starter Checklist</h3>
-        <p>Step-by-step checklist to launch your online business.</p>
-        <a class="btn" target="_blank" rel="noopener" href="https://jared585.gumroad.com/l/sbqwjb">Get It (Pay $0+)</a>
-      </article>
-    </div>
-  </section>
-
-  <section id="products" class="section">
-    <h2>Featured Products</h2>
-    <div class="slider" aria-label="Product slider (carousel)">
-      <button class="slide-btn prev" aria-label="Previous product">&#10094;</button>
-      <div class="slides" id="product-slides">
-        <!-- Slides injected by script.js -->
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Your All-in-One Hub for Freedom, Wealth & Living Well</h1>
+      <p>From starting your first online business to spending smart and living life on your terms — we give you the tools, tips, and systems to make it happen.</p>
+      <div class="ctaRow">
+        <a class="btn" href="/checklist/">Get the Free 30-Day Checklist</a>
+        <a class="btn ghost" href="#store">Browse Products</a>
       </div>
-      <button class="slide-btn next" aria-label="Next product">&#10095;</button>
-    </div>
-    <p class="disclaimer">Transparent pricing. No fake urgency. More added regularly.</p>
-  </section>
+      <p class="muted" style="margin-top:10px">Instant access • No hype • Built for busy people</p>
+    </section>
 
-  <section id="requests" class="section">
-    <h2>Request a Product</h2>
-    <p>Want something specific? Tell us exactly what you need, and we’ll prioritize it.</p>
-    <form class="request-form" action="mailto:jaredritter585@gmail.com" method="post" enctype="text/plain">
-      <label for="req-name">Name</label>
-      <input id="req-name" name="Name" required/>
-      <label for="req-email">Email</label>
-      <input id="req-email" name="Email" type="email" required/>
-      <label for="req-details">What do you want us to build?</label>
-      <textarea id="req-details" name="Request" rows="5" required></textarea>
-      <button class="btn primary" type="submit">Send Request</button>
-    </form>
-  </section>
-
-  <section id="customer-wall" class="section">
-    <h2>Customer Wall</h2>
-    <div id="testimonials" class="testimonials">
-      <!-- Testimonials injected by script.js -->
-    </div>
-    <small class="note">Want to be featured? Email your review to <a href="mailto:jaredritter585@gmail.com">jaredritter585@gmail.com</a>.</small>
-  </section>
-
-  <section id="about" class="section">
-    <h2>About Jared Ritter</h2>
-    <p>A husband, dad of seven, and relentless builder. Dream of Freedom exists to create simple, honest digital products that help real people make real progress — without hype.</p>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jaredritter585@gmail.com">jaredritter585@gmail.com</a></p>
-    <p>Business hours: Nights & weekends (America/Chicago). Replies within 24–48 hours.</p>
-  </section>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Dream of Freedom. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    <!-- Categories -->
+    <section id="categories" class="section">
+      <h2>Explore the Dream of Freedom Store</h2>
+      <p class="sub">Everything you need to build, grow, and enjoy your freedom.</p>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Category</span>
+          <h3>Start Making Money</h3>
+          <p class="muted">Side hustles, AI tools, and step-by-step business guides to create new income streams.</p>
+          <div class="product-actions"><a class="
