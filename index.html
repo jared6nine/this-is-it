@@ -6,20 +6,10 @@
     <title>Dream of Freedom — Your Hub for Freedom, Wealth & Living</title>
     <meta name="description" content="Digital products, AI tools, and step-by-step guides to build income and freedom.">
 
-    <!-- MailerLite Universal (loads forms) -->
-    <script>
-      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-      .push(arguments);};l=d.createElement(e);l.async=1;l.src=u;
-      n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
-      })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account', '1651327');  /* ← your MailerLite account id */
-    </script>
-    <!-- End MailerLite Universal -->
-
+    <!-- Base styles -->
     <style>
       :root{
-        --bg:#0b0b0f; --card:#12121a; --text:#e9e9f2; --muted:#a9a9bb; --gold:#d4af37; --line:#1f1f2a;
-        --accent:#2a2a39;
+        --bg:#0b0b0f; --card:#12121a; --text:#e9e9f2; --muted:#a9a9bb; --gold:#d4af37; --line:#1f1f2a; --accent:#2a2a39;
       }
       *{box-sizing:border-box}
       html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
@@ -41,8 +31,6 @@
       .hero h1{font-size:clamp(28px,6vw,46px);line-height:1.15;margin:0 0 8px}
       .hero p{font-size:clamp(16px,2.6vw,20px);color:var(--muted);margin:0}
       .ctaRow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px}
-      /* If you want the phoenix art as a faint backdrop, set it here */
-      /* .hero{background: url('/path/to/your/phoenix.jpg') top center/cover no-repeat; } */
 
       /* Carousel */
       .carousel{position:relative;overflow:hidden;margin:16px auto;max-width:1100px}
@@ -53,13 +41,9 @@
       .carBtn{position:absolute;top:50%;transform:translateY(-50%);border:none;background:#161823;padding:8px 12px;border-radius:12px;cursor:pointer;opacity:.9;color:#fff}
       .carBtn:hover{opacity:1}
       .prev{left:4px} .next{right:4px}
-      @media (max-width:640px){
-        .card{min-width:85vw}
-      }
+      @media (max-width:640px){ .card{min-width:85vw} }
 
-      /* Footer */
       footer{margin:40px 0 8px;color:var(--muted);text-align:center;font-size:14px}
-      .ml-embedded{margin-top:12px}
     </style>
   </head>
   <body>
@@ -73,7 +57,7 @@
         <nav class="nav">
           <a href="#store">Store</a>
           <a href="#about">About</a>
-          <a class="btn ghost" href="#signup">Freebie</a>
+          <a class="btn.ghost" href="#signup">Freebie</a>
         </nav>
       </header>
 
@@ -87,14 +71,16 @@
           <a class="btn ghost" href="#store">Browse the Store</a>
         </div>
 
-        <!-- Embedded MailerLite form (Success redirect set in MailerLite form settings) -->
-<p style="text-align:center;font-weight:700;color:#ff4444;margin:8px 0">
-  VERSION: 1.1 (form should be here ⬇️)
-</p>
-<div id="signup" style="max-width:560px;margin:16px auto 0;">
-  <div class="ml-embedded" data-form="z3AfI3"></div>
-</div>
-
+        <!-- ====== SIGNUP AREA ====== -->
+        <div id="signup" style="max-width:560px;margin:16px auto 0;">
+          <!-- PASTE YOUR WHOLE MAILERLITE HTML EMBED CODE HERE -->
+          <!-- Example structure (do NOT use this example—use the real code from MailerLite):
+          <style type="text/css"> ... </style>
+          <div class="ml-form-embed" data-account="XXXX" data-form="YYYY"></div>
+          <script src="https://assets.mailerlite.com/js/universal.js"></script>
+          -->
+        </div>
+        <!-- ======================== -->
       </section>
 
       <div class="hr"></div>
@@ -149,8 +135,7 @@
       <section id="about" class="section">
         <h2>About Me</h2>
         <p>Hey, I’m Jared (“Jay”) — dad of a big family, rockhound, and relentless student of financial freedom.
-           Dream of Freedom is my build-in-public project: real tools, real products, no fluff.
-           If there’s something you want me to make next, tell me and I’ll build it.</p>
+           Dream of Freedom is my build-in-public project: real tools, real products, no fluff.</p>
 
         <div class="ctaRow" style="margin-top:12px;">
           <a class="btn" href="#signup">Get the Free 30-Day Checklist</a>
