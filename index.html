@@ -1,257 +1,259 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dream of Freedom — Digital Products that Build Your Future</title>
-  <meta name="description" content="Practical playbooks, checklists, and guides. Start fast. Scale smart. New products added regularly." />
+  <title>Dream of Freedom — Passive Income + Freebies</title>
+  <meta name="description" content="Dream of Freedom: Free resources and step‑by‑step guides to build online income. Grab the freebie, then level up with the Passive Income Bible." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0c10;            /* page background */
-      --panel:#101217;         /* card background */
-      --text:#e8eaf0;          /* base text */
-      --muted:#a7adbb;         /* secondary text */
-      --gold:#d4af37;          /* brand gold */
-      --goldDark:#8c7328;      /* darker gold */
-      --accent:#7dd3fc;        /* focus outline */
-      --radius:18px;
-      --shadow:0 18px 50px rgba(0,0,0,.45);
-      --max:1200px;
+      --bg:#0b0b12;--bg2:#11111a;--card:#151522;--text:#e9ecf1;--muted:#b7c0cc;--accent:#f5c451;--accent2:#6ce0ff;--danger:#ff6b6b;--ok:#2fe6a7;
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; color:var(--text);
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
-      background:#0b0c10 url('images/dream-of-freedom-bg.jpg') no-repeat center top / cover fixed;
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .btn{display:inline-block;padding:14px 18px;border-radius:12px;font-weight:700;letter-spacing:.3px}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ffd978);color:#231e00;box-shadow:0 8px 24px rgba(245,196,81,.25)}
+    .btn-secondary{background:#232338;color:#fff;border:1px solid #2a2a44}
+    .badge{display:inline-block;background:#232338;color:#e9ecf1;border:1px solid #2a2a44;padding:6px 10px;border-radius:999px;font-size:12px}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(11,11,18,.75);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #191928}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:900}
+    .logo-mark{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--accent),#ff7a00 60%, #a600ff 100%);box-shadow:0 0 30px rgba(255,180,70,.25)}
+    .nav-links{display:flex;gap:16px;flex-wrap:wrap}
+    .nav-links a{padding:10px 12px;border-radius:10px}
+    .nav-links a:hover{background:#1a1a2a}/* Hero Freebie */
+.hero{padding:56px 0 32px;border-bottom:1px solid #191928}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.hero-card{background:linear-gradient(180deg,#131324,#0b0b12);border:1px solid #1d1d31;border-radius:20px;padding:26px}
+.hero h1{font-size:36px;line-height:1.15;margin:0 0 10px}
+.hero p{color:var(--muted);margin:8px 0 18px}
+.embed{background:#0f0f19;border:1px dashed #2b2b45;border-radius:14px;padding:14px}
+.mini{font-size:12px;color:#9aa6b2}
 
-    /* Header */
-    header{ position:sticky; top:0; z-index:1000; }
-    .navGlass{
-      background:linear-gradient(to bottom, rgba(11,12,16,.95), rgba(11,12,16,.65) 70%, rgba(11,12,16,0));
-      backdrop-filter:saturate(120%) blur(8px);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav{display:flex; align-items:center; justify-content:space-between; height:66px}
-    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px}
-    .brand img{width:36px; height:36px; border-radius:50%; box-shadow:0 0 0 2px rgba(212,175,55,.35)}
-    .brand span{font-family:Poppins,Inter,sans-serif}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.1); text-decoration:none; font-weight:700}
-    .btn.gold{background:var(--gold); color:#111; border-color:transparent}
-    .btn.ghost{background:rgba(255,255,255,.04)}
-    nav a{opacity:.9; margin-left:10px}
-    nav a:hover{opacity:1}
+/* Passive Income Bible Feature */
+.feature{padding:36px 0;border-bottom:1px solid #191928}
+.feature-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center}
+.feature-card{background:linear-gradient(180deg,#131324,#0b0b12);border:1px solid #1d1d31;border-radius:20px;padding:26px}
+.feature h2{font-size:30px;margin:0 0 10px}
+.price{font-size:14px;color:#9aa6b2}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#1e1e2f;border:1px solid #2a2a44;font-size:12px;margin-right:8px}
 
-    /* Hero */
-    .hero{padding:72px 0 36px}
-    .heroGrid{display:grid; grid-template-columns:1.1fr .9fr; gap:24px}
-    .card{border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); background:rgba(11,12,16,.45); border:1px solid rgba(255,255,255,.06)}
-    h1{font-family:Poppins,Inter,sans-serif; font-size:44px; line-height:1.12; margin:0 0 12px}
-    .muted{color:var(--muted)}
-    .priceTag{display:inline-block; margin-left:8px; padding:6px 10px; border-radius:10px; background:rgba(212,175,55,.18); color:#fff; font-weight:800}
+/* About */
+.about{padding:36px 0;border-bottom:1px solid #191928}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.about-card{background:linear-gradient(180deg,#131324,#0b0b12);border:1px solid #1d1d31;border-radius:20px;padding:26px}
 
-    /* Carousel */
-    .section{padding:44px 0}
-    .section h2{font-family:Poppins,Inter,sans-serif; font-size:28px; margin:0 0 14px}
-    .carousel{position:relative}
-    .track{display:grid; grid-auto-flow:column; grid-auto-columns:calc(33.333% - 16px); gap:24px; overflow-x:auto; scroll-behavior:smooth; padding-bottom:8px}
-    .pCard{background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
-    .pCard img{width:100%; height:180px; object-fit:cover}
-    .pCard .pad{padding:16px}
-    .pCard h3{margin:6px 0 6px; font-size:18px}
-    .pCard p{margin:0 0 10px; color:var(--muted)}
-    .pCard .price{font-weight:800; color:var(--gold)}
-    .buy{margin:12px 16px 16px; text-align:center; text-decoration:none; background:var(--gold); color:#111; padding:12px 14px; border-radius:12px; font-weight:800}
-    .carBtn{position:absolute; top:40%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; display:grid; place-items:center; border:1px solid rgba(255,255,255,.1); background:rgba(0,0,0,.35); cursor:pointer}
-    .carBtn:hover{background:rgba(0,0,0,.55)}
-    .carBtn.prev{left:-6px}
-    .carBtn.next{right:-6px}
+/* Customer Wall */
+.wall{padding:36px 0;border-bottom:1px solid #191928}
+.wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.note{background:#121224;border:1px solid #1f1f34;border-radius:14px;padding:16px}
+.wall-form input,.wall-form textarea{width:100%;background:#0f0f19;border:1px solid #2b2b45;border-radius:10px;color:#e9ecf1;padding:12px;margin:8px 0}
+.wall-form textarea{min-height:120px}
 
-    @media (max-width: 960px){
-      .heroGrid{grid-template-columns:1fr}
-      .track{grid-auto-columns:80%}
-    }
-    @media (max-width: 620px){
-      .track{grid-auto-columns:92%}
-      h1{font-size:34px}
-    }
+/* Slider */
+.slider-wrap{padding:36px 0}
+.slider-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}
+.row{display:flex;gap:16px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.card{min-width:260px;background:linear-gradient(180deg,#141427,#0d0d16);border:1px solid #1d1d31;border-radius:18px;padding:18px;scroll-snap-align:start}
+.card h4{margin:6px 0 6px;font-size:18px}
+.card p{color:#9aa6b2;font-size:14px;margin:0 0 10px}
+.chip{display:inline-block;font-size:12px;background:#1e1e2f;border:1px solid #2a2a44;border-radius:999px;padding:6px 10px;margin-right:6px}
 
-    /* Footer */
-    footer{padding:36px 0 60px; color:var(--muted)}
-    .hr{height:1px; background:linear-gradient(90deg, rgba(212,175,55,.35), rgba(255,255,255,.08), rgba(212,175,55,.35)); margin:28px 0}
+footer{border-top:1px solid #191928;background:var(--bg2);padding:28px 0;margin-top:24px;color:#9aa6b2}
+
+@media (max-width: 900px){
+  .hero-grid,.feature-grid,.about-grid,.wall-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero h1{font-size:30px}
+  .feature h2{font-size:26px}
+}
+
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="navGlass">
-    <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="Dream of Freedom home">
-        <img src="images/logo-gold-phoenix.png" alt="Dream of Freedom" />
-        <span>Dream of Freedom</span>
-      </a>
-      <nav>
-        <a class="btn" href="#products">Products</a>
-        <a class="btn gold" href="https://jared585.gumroad.com/l/sberd" target="_blank" rel="noopener">LLC Guide $13</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero wrap">
-      <div class="heroGrid">
-        <article class="card">
-          <h1>Build Real-World Freedom.<br/>Tools that actually ship.</h1>
-          <p class="muted">Playbooks, checklists, and guides to launch revenue faster. New products added constantly — because standing still isn’t an option.</p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap">
-            <a class="btn gold" href="https://jared585.gumroad.com/l/sberd" target="_blank" rel="noopener">New: LLC Business Mastery Guide <span class="priceTag">$13</span></a>
-            <a class="btn ghost" href="#products">Browse All Products</a>
-          </div>
-        </article>
-        <aside class="card" style="display:grid; place-items:center">
-          <img src="images/llc-product-cover.png" alt="LLC Guide Cover" style="width:100%; max-width:520px; border-radius:14px; border:1px solid rgba(255,255,255,.08)" />
-        </aside>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-mark" aria-hidden="true"></div>
+        <span>Dream of <span style="color:var(--accent)">Freedom</span></span>
       </div>
-    </section>
-
-    <div class="wrap"><div class="hr"></div></div>
-
-    <!-- PRODUCTS -->
-    <section id="products" class="section wrap">
-      <h2>Products</h2>
-      <p class="muted">Start free, upgrade when you’re ready. Tap a card to open on Gumroad.</p>
-
-      <div class="carousel">
-        <button class="carBtn prev" aria-label="Previous" type="button">◂</button>
-        <div id="prodTrack" class="track" tabindex="0">
-
-          <!-- Free: 30-Day Online Business Starter Checklist ($0+) -->
-          <article class="pCard">
-            <a href="https://jared585.gumroad.com/l/sbqwjb" target="_blank" rel="noopener">
-              <img src="images/30day-checklist-cover.jpg" alt="30-Day Online Business Starter Checklist">
-              <div class="pad">
-                <h3>30-Day Online Business Starter Checklist</h3>
-                <p>Action-by-action checklist to launch your online biz in 30 days.</p>
-                <div class="price">$0+</div>
-              </div>
-            </a>
-            <a class="buy" href="https://jared585.gumroad.com/l/sbqwjb" target="_blank" rel="noopener">Get It Free</a>
-          </article>
-
-          <!-- $7: 10 AI Money Hacks -->
-          <article class="pCard">
-            <a href="https://jared585.gumroad.com/l/jxgog" target="_blank" rel="noopener">
-              <img src="images/10-ai-hacks-cover.jpg" alt="10 AI Money Hacks the Gurus Don’t Want You to Know">
-              <div class="pad">
-                <h3>10 AI Money Hacks</h3>
-                <p>Real, fast methods to spin up new income with AI today.</p>
-                <div class="price">$7</div>
-              </div>
-            </a>
-            <a class="buy" href="https://jared585.gumroad.com/l/jxgog" target="_blank" rel="noopener">Buy $7</a>
-          </article>
-
-          <!-- $13: LLC Business Mastery Guide (NEW) -->
-          <article class="pCard">
-            <a href="https://jared585.gumroad.com/l/sberd" target="_blank" rel="noopener">
-              <img src="images/llc-product-cover.png" alt="LLC Business Mastery Guide">
-              <div class="pad">
-                <h3>LLC Business Mastery Guide</h3>
-                <p>What an LLC is, how to form one, taxes, funding routes, and step-by-step playbooks.</p>
-                <div class="price">$13</div>
-              </div>
-            </a>
-            <a class="buy" href="https://jared585.gumroad.com/l/sberd" target="_blank" rel="noopener">Buy $13</a>
-          </article>
-
-          <!-- $17: 47-Method AI Profit Guide -->
-          <article class="pCard">
-            <a href="https://jared585.gumroad.com/l/ithyji" target="_blank" rel="noopener">
-              <img src="images/47-methods-cover.jpg" alt="47-Method AI Profit Guide">
-              <div class="pad">
-                <h3>47‑Method AI Profit Guide</h3>
-                <p>Stop guessing. 47 proven ways to monetize AI with breakdowns and workflows.</p>
-                <div class="price">$17</div>
-              </div>
-            </a>
-            <a class="buy" href="https://jared585.gumroad.com/l/ithyji" target="_blank" rel="noopener">Buy $17</a>
-          </article>
-
-          <!-- $31: Start a Business in 2025 -->
-          <article class="pCard">
-            <a href="https://jared585.gumroad.com/l/oygcb" target="_blank" rel="noopener">
-              <img src="images/start-2025-cover.jpg" alt="Start a Business in 2025 — The Complete Guide">
-              <div class="pad">
-                <h3>Start a Business in 2025</h3>
-                <p>From idea to launch. Modern playbook for this year’s landscape.</p>
-                <div class="price">$31</div>
-              </div>
-            </a>
-            <a class="buy" href="https://jared585.gumroad.com/l/oygcb" target="_blank" rel="noopener">Buy $31</a>
-          </article>
-
-          <!-- $37: 50 Exclusive Money Secrets -->
-          <article class="pCard">
-            <a href="https://jared585.gumroad.com/l/uhhjt" target="_blank" rel="noopener">
-              <img src="images/50-secrets-cover.jpg" alt="50 Exclusive Money Secrets They Don’t Want You To Know">
-              <div class="pad">
-                <h3>50 Exclusive Money Secrets</h3>
-                <p>Advanced tactics and levers for faster growth.</p>
-                <div class="price">$37</div>
-              </div>
-            </a>
-            <a class="buy" href="https://jared585.gumroad.com/l/uhhjt" target="_blank" rel="noopener">Buy $37</a>
-          </article>
-
+      <div class="nav-links">
+        <a href="#freebie">Freebie</a>
+        <a href="#bible">Passive Income Bible</a>
+        <a href="#about">About</a>
+        <a href="#wall">Customer Wall</a>
+        <a href="#shop">Shop</a>
+      </div>
+    </div>
+  </div>  <!-- HERO: FREEBIE FIRST -->  <section id="freebie" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <span class="badge">Free Download</span>
+        <h1>5 AI Side Hustles You Can Start <u>Today</u> (No Experience Needed)</h1>
+        <p>Snag the checklist, pick one hustle, and follow the exact steps. We’ll send it to your inbox, then I’ll show you the fastest way to monetize it this week.</p>
+        <ul class="mini" style="margin:0 0 16px 16px">
+          <li>Step‑by‑step tasks (30‑minute blocks)</li>
+          <li>Starter scripts, prompts, and tools</li>
+          <li>Bonus: 7‑day action plan email series</li>
+        </ul>
+        <div class="embed">
+          <!-- ✅ PASTE YOUR MAILERLITE EMBED BELOW -->
+          <!-- BEGIN MailerLite Embed -->
+          <!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1651327');
+</script>
+<!-- End MailerLite Universal --><div class="ml-embedded" data-form="z3Afi3"></div>
+          <!-- END MailerLite Embed -->
+          <p class="mini">Having trouble? <a href="#" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">Contact support</a>.</p>
         </div>
-        <button class="carBtn next" aria-label="Next" type="button">▸</button>
       </div>
-    </section>
-
-    <div class="wrap"><div class="hr"></div></div>
-
-    <!-- ABOUT -->
-    <section id="about" class="section wrap">
-      <h2>About Me</h2>
-      <div class="card">
-        <p class="muted">I’m Jay — builder, systems thinker, and relentless student of financial freedom. Dream of Freedom is my build‑in‑public project: practical tools, no fluff, just momentum. If you want something specific, contact me via any product’s Gumroad page and I’ll prioritize it.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="hr"></div>
-      <div style="display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap">
-        <div>© <span id="y"></span> Dream of Freedom</div>
-        <div class="muted">Always adding new products. Come back soon.</div>
+      <div class="hero-card">
+        <h3 style="margin:0 0 8px">What you get</h3>
+        <div class="note"><strong>Cheat‑sheets:</strong> prompts, outreach scripts, gig templates</div>
+        <div class="note" style="margin-top:10px"><strong>Quick wins:</strong> 1‑hour setups to your first $ online</div>
+        <div class="note" style="margin-top:10px"><strong>Follow‑ups:</strong> The exact emails that convert freebie leads into customers</div>
+        <p class="mini" style="margin-top:10px">We respect your inbox. Unsubscribe anytime with one click.</p>
       </div>
     </div>
-  </footer>
+  </section>  <!-- FEATURE: PASSIVE INCOME BIBLE -->  <section id="bible" class="feature">
+    <div class="container feature-grid">
+      <div class="feature-card">
+        <span class="pill">New</span><span class="pill">2025 Edition</span>
+        <h2>Passive Income Bible — <em>PLUS</em></h2>
+        <p class="price">Instant digital download • Lifetime updates</p>
+        <p>Your A‑to‑Z playbook of proven passive income systems, with step‑by‑step setups, scripts, and automations. Built to get your first sales fast — then scale.</p>
+        <ul class="mini" style="margin:0 0 16px 16px">
+          <li>47+ methods with clear checklists</li>
+          <li>Automation stacks (no fluff)</li>
+          <li>Case‑study templates you can copy</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="https://jared585.gumroad.com/l/cfqisp" target="_blank" rel="noopener">Buy Now — Secure Checkout</a>
+          <a class="btn btn-secondary" href="#shop">Browse More</a>
+        </div>
+      </div>
+      <div class="feature-card">
+        <h3 style="margin:0 0 8px">What’s inside</h3>
+        <div class="note"><strong>Blueprints:</strong> Shortcuts for traffic, offers, and conversions</div>
+        <div class="note" style="margin-top:10px"><strong>Tools:</strong> AI prompts, templates, and calculators</div>
+        <div class="note" style="margin-top:10px"><strong>Scale:</strong> Turn one win into a repeatable system</div>
+        <p class="mini" style="margin-top:10px">Bonus: Members‑only updates and tactics via email.</p>
+      </div>
+    </div>
+  </section>  <!-- ABOUT -->  <section id="about" class="about">
+    <div class="container about-grid">
+      <div class="about-card">
+        <h3>About Me</h3>
+        <p>Hey, I’m <strong>Jared Ritter</strong>. I built Dream of Freedom to make money systems simple — no guru fluff. I’m a dad of seven, a relentless problem‑solver, and a builder who believes financial freedom is a set of steps, not a mystery.
+        </p>
+        <p>Everything here is designed so you can copy it, click by click. If you’re ready to take action, I’ll meet you halfway with tools that do the heavy lifting.</p>
+      </div>
+      <div class="about-card">
+        <h3>What to expect</h3>
+        <ul class="mini" style="margin:0 0 0 16px">
+          <li>Practical guides you can execute same‑day</li>
+          <li>Free resources to get you moving</li>
+          <li>Affordable products that actually deliver</li>
+        </ul>
+      </div>
+    </div>
+  </section>  <!-- CUSTOMER WALL -->  <section id="wall" class="wall">
+    <div class="container">
+      <h3 style="margin:0 0 12px">Customer Wall</h3>
+      <p class="mini" style="margin:0 0 16px">Drop your wins, feedback, or requests — I read every message and feature the best ones here.</p>
+      <div class="wall-grid">
+        <div>
+          <div class="note"><strong>“The checklist had me earning by the weekend.”</strong><br><span class="mini">— A. Martinez</span></div>
+          <div class="note" style="margin-top:10px"><strong>“No fluff, just steps I could follow.”</strong><br><span class="mini">— K. Johnson</span></div>
+          <div class="note" style="margin-top:10px"><strong>“The Passive Income Bible is worth 10x the price.”</strong><br><span class="mini">— S. Nguyen</span></div>
+        </div>
+        <div>
+          <form class="wall-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your name (optional)" />
+            <input type="email" name="email" placeholder="Email (optional, for a reply)" />
+            <textarea name="message" placeholder="Share your win, testimonial, or what you want me to build next…"></textarea>
+            <button class="btn btn-primary" type="submit">Send to Customer Wall</button>
+            <p class="mini">Tip: Include your social @ if you want a shoutout when I feature your comment.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- PRODUCT SLIDER / SHOP -->  <section id="shop" class="slider-wrap">
+    <div class="container">
+      <div class="slider-head">
+        <h3 style="margin:0">More Products</h3>
+        <div class="mini">Scroll →</div>
+      </div>
+      <div class="row">
+        <!-- Passive Income Bible (also featured above) -->
+        <a class="card" href="https://jared585.gumroad.com/l/cfqisp" target="_blank" rel="noopener">
+          <span class="chip">New</span>
+          <h4>Passive Income Bible — PLUS</h4>
+          <p>47+ proven methods with step‑by‑step automation stacks.</p>
+          <div class="mini">Instant Download</div>
+        </a>
+        <!-- 47‑Method AI Profit Guide -->
+        <a class="card" href="#" data-link="https://jared585.gumroad.com/l/ithyji" target="_blank" rel="noopener">
+          <span class="chip">Bestseller</span>
+          <h4>47‑Method AI Profit Guide</h4>
+          <p>Blueprints for AI‑powered income streams that actually convert.</p>
+          <div class="mini">$17</div>
+        </a>
+        <!-- 10 AI Money Hacks -->
+        <a class="card" href="#" data-link="https://jared585.gumroad.com/l/jxgog" target="_blank" rel="noopener">
+          <span class="chip">Quick Win</span>
+          <h4>10 AI Money Hacks They Don’t Want You To Know</h4>
+          <p>Fast, actionable plays to make your first sales online.</p>
+          <div class="mini">$7</div>
+        </a>
+        <!-- 30‑Day Online Business Starter Checklist (Free/0+) -->
+        <a class="card" href="#" data-link="https://jared585.gumroad.com/l/sbqwjb" target="_blank" rel="noopener">
+          <span class="chip">Free</span>
+          <h4>30‑Day Online Business Starter Checklist</h4>
+          <p>Follow the day‑by‑day roadmap to launch.</p>
+          <div class="mini">$0+</div>
+        </a>
+        <!-- Start a Business in 2025 -->
+        <a class="card" href="#" data-link="https://jared585.gumroad.com/l/oygcb" target="_blank" rel="noopener">
+          <span class="chip">Guide</span>
+          <h4>Start a Business in 2025 (Complete Guide)</h4>
+          <p>Everything you need to go from idea to revenue.</p>
+          <div class="mini">$31</div>
+        </a>
+        <!-- 50 Exclusive Money Secrets -->
+        <a class="card" href="#" data-link="https://jared585.gumroad.com/l/uhhjt" target="_blank" rel="noopener">
+          <span class="chip">Insider</span>
+          <h4>50 Exclusive Money Secrets They Don’t Tell You</h4>
+          <p>Uncommon strategies to stack cash and keep it.</p>
+          <div class="mini">$37</div>
+        </a>
+      </div>
+    </div>
+  </section>  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <div>© <span id="year"></span> Dream of Freedom. All rights reserved.</div>
+        <div class="mini">Questions? <a href="mailto:jaredritter585@gmail.com">Email support</a></div>
+      </div>
+    </div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-  <script>
-    // Footer year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Carousel controls
-    const track = document.getElementById('prodTrack');
-    const prev = document.querySelector('.carBtn.prev');
-    const next = document.querySelector('.carBtn.next');
-    const step = () => track.clientWidth * 0.9;
-    prev?.addEventListener('click', () => track.scrollBy({left:-step(), behavior:'smooth'}));
-    next?.addEventListener('click', () => track.scrollBy({left: step(), behavior:'smooth'}));
-
-    // Keyboard support
-    track.addEventListener('keydown', (e)=>{
-      if(e.key==='ArrowRight') track.scrollBy({left: step(), behavior:'smooth'});
-      if(e.key==='ArrowLeft') track.scrollBy({left:-step(), behavior:'smooth'});
+    // If any slider links still have placeholder href="#", swap in data-link values so clicks still work after you update.
+    document.querySelectorAll('.card[href="#"]').forEach(function(card){
+      var link = card.getAttribute('data-link');
+      if(link && link !== 'REPLACE_WITH_...') card.setAttribute('href', link);
     });
-  </script>
-</body>
+  </script></body>
 </html>
